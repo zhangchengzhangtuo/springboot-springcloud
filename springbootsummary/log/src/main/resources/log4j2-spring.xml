@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d|%-5level|%t|%logger{36}|%msg%n"/>
+        </Console>
+    </appenders>
+    <loggers>
+        <logger name="com.apin" level="debug" additivity="false">
+            <appender-ref ref="Console"/>
+        </logger>
+        <root level="error">
+            <appender-ref ref="Console"/>
+        </root>
+    </loggers>
+</configuration>
+
+<!--这种方式有效，但是需要在pom文件中引入对应的log4j2jar包-->
